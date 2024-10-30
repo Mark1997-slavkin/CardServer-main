@@ -1,12 +1,12 @@
 const express = require("express");
 const connectToDb = require("./DB/dbService");
-
+require('dotenv').config();
 const router = require("./router/router");
 const corsMiddleWare = require("./middlewares/cors");
 const chalk = require("chalk");
 const { handleError } = require("./utils/handleErrors");
 const loggerService = require("./logger/loggerServices");
-require('dotenv').config();
+
 
 const app = express();
 const PORT = process.env.PORT || 8181;
